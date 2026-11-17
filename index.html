@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAFI.md · Muhammad Safi ur Rehman</title>
+    <meta name="description" content="Muhammad Safi ur Rehman builds the harness around the model: agents, evals, sandboxes and human-in-the-loop runs. Currently a harness engineer at Zikra Infotech." />
+    <meta name="theme-color" content="#191714" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191714'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23ec4a2c'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="is-loading">
+    <a class="skip" href="#read">Skip to the text</a>
+
+    <!-- The plain file. Screen readers read this. Reduced motion shows it instead of the show. -->
+    <article id="read" class="read" lang="en">
+      <header>
+        <p class="read__by">MUHAMMAD SAFI UR REHMAN · ISLAMABAD · 2026</p>
+        <h1>SAFI.md</h1>
+        <blockquote>
+          <p>&gt; builds the harness around the model.</p>
+          <p>&gt; agents, evals, sandboxes. the parts that make them hold up.</p>
+          <p>&gt; currently a harness engineer at Zikra Infotech.</p>
+        </blockquote>
+      </header>
+
+      <h2>## the job</h2>
+      <p>A model on its own is a puppet on the floor. Capable, but nothing holds it up. I build the strings: the tools it can call, the memory it keeps, the middleware between them, the sandboxes it runs in, the evals that grade it. And a person's hand on the bar. That's the harness.</p>
+
+      <h2>## how I build a run</h2>
+      <p>My pattern for long-running agents. The same shape works for research, coding or document agents.</p>
+      <ol>
+        <li>A task comes in. Big, messy, long-running.</li>
+        <li>The lead splits it between workers.</li>
+        <li>One worker hits something it shouldn't guess.</li>
+        <li>So the run stops, saves a checkpoint, and asks a person.</li>
+        <li>The answer comes back. The show picks up where it stopped.</li>
+        <li>Every step leaves a trace I can grade.</li>
+      </ol>
+
+      <h2>## the crew behind the show</h2>
+      <p>The puppets get the applause. The crew makes the show work.</p>
+      <ul>
+        <li>Prop master, tools and permissions: I design the tools an agent can pick up, and what it's allowed to do with them. One action at a time, each with a receipt. (Clicky Local)</li>
+        <li>Librarian, retrieval: the agent should read the right page, not every page. I build retrieval that keeps each tenant's documents to itself. (Multi-Tenant RAG)</li>
+        <li>Script supervisor, memory and context: I decide what stays in context, what gets summarized, and what gets saved for later.</li>
+        <li>Stage manager, sandboxes and shipping: agents run real code in a sandbox they can't break out of, shipped so the same run behaves the same way twice.</li>
+        <li>Critic, evals and traces: I read traces and score runs, so a fix is measured, not guessed.</li>
+      </ul>
+
+      <h2>## found, missed, invented</h2>
+      <p>I read traces until the agent's mistakes have names. Every graded run sorts its output into three boxes: what it found, what it missed, and what it made up. Then I fix the prompt, the skill or the tool. Not the grader.</p>
+
+      <h2>## on the side</h2>
+      <h3>### Clicky Local</h3>
+      <p>A macOS menu-bar agent. Voice or typed. A local Qwen model handles small things, a cloud Codex planner handles the rest. One action at a time, each with a receipt. It says done only after it checks. 21 Swift tests.</p>
+      <h3>### AgentForge</h3>
+      <p>Drag agents into a chain and run it. More than 50 reusable pipelines and more than 1,000 runs with branching history.</p>
+      <h3>### Multi-Tenant RAG</h3>
+      <p>Upload documents, embed a chatbot with one script tag or an API key. More than 20 users and 1,000 queries with no cross-tenant leaks.</p>
+      <h3>### Cofoundry</h3>
+      <p>An idea goes in. Market research and a competitor scan come out, then a launch page deployed in one click.</p>
+
+      <h2>## the trail</h2>
+      <ul>
+        <li>Jun 2025: Quantum Edge LLC, AI Engineer Intern. CNNs, RNNs and GANs across more than five projects.</li>
+        <li>Oct 2025: ExiTech, AI Engineer Intern. Four MVPs on FastAPI and React, prototypes about 40% faster.</li>
+        <li>Jan 2026: ExiTech, Software Developer. Workflow automation, about 25% less manual work.</li>
+        <li>Jun 2026: FAST NUCES, BS Software Engineering.</li>
+        <li>Aug 2026: Zikra Infotech LLC, Harness Engineer, Millos.ai team. Agent harness, evals, sandboxes, human-in-the-loop. Now.</li>
+      </ul>
+
+      <h2>## the kit</h2>
+      <ul>
+        <li>Agents: LangChain JS, Deep Agents, LangGraph, LangSmith, Bedrock, RAG, skills, tool design, middleware, context compaction, evals.</li>
+        <li>Languages: TypeScript, Python, Swift, SQL, Go, C++, Java, C#.</li>
+        <li>Full stack: Next.js, React, FastAPI, Node.js, Univer, Supabase, Postgres, Drizzle, MongoDB, Qdrant.</li>
+        <li>Infra: Daytona, Docker, Vercel, pnpm, Turborepo, Vitest, GitHub Actions.</li>
+        <li>Pair tools: Claude Code, Codex, Cursor.</li>
+        <li>Practice: agent evals, trace debugging, prompt and skill design, human-in-the-loop flows, multi-tenant security.</li>
+      </ul>
+
+      <h2>## curtain call</h2>
+      <p>Still running. Say hi: <a href="mailto:m.safiurrehmann@gmail.com">m.safiurrehmann<wbr />@gmail.com</a>. <a href="https://x.com/sevonai1">@sevonai1 on X</a>. <a href="https://www.linkedin.com/in/muhammad-safi-ur-rehman-934552253">LinkedIn</a>. <a href="/safi-resume.pdf">Resume (PDF)</a>.</p>
+    </article>
+
+    <!-- =================== HUD =================== -->
+    <div class="hud" aria-hidden="true">
+      <button class="hud-mark" tabindex="-1" data-go="home"><span>SAFI</span><i></i><span>md</span></button>
+      <button class="pill hud-index" tabindex="-1"><span>index</span><i class="hud-bars"></i></button>
+    </div>
+    <nav class="index" aria-hidden="true">
+      <div class="index__in">
+        <p class="index__head"><b>#</b> SAFI.md · the programme</p>
+        <ol class="index__list"></ol>
+        <p class="index__foot">or <a href="#read" class="index__plain">read it as a plain file</a></p>
+      </div>
+    </nav>
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- =================== THE STAGE =================== -->
+    <div id="stage" aria-hidden="true">
+
+      <!-- 1 · the job: a puppet on the floor gets its strings -->
+      <section class="room r-job" data-label="job" data-name="the job">
+        <div class="wall"></div><div class="floor"></div><div class="spot"></div>
+        <p class="head"><b class="mk">##</b> the job</p>
+        <div class="j-say">
+          <p class="big split j-l1">A model on its own is a puppet on the floor.</p>
+          <p class="big j-l2"><span class="split">I build the <em>strings</em></span><i class="slot j-slot2"></i></p>
+        </div>
+        <div class="j-art">
+          <div class="pup pup--job" data-color="#2f4fb5" data-hand="1" data-idle="0"></div>
+          <div class="j-tags"></div>
+        </div>
+        <p class="big j-l3"><span class="split">That's the harness</span><i class="slot j-slot3"></i></p>
+      </section>
+
+      <!-- 2 · how I build a run -->
+      <section class="room r-run" data-label="run" data-name="how I build a run">
+        <div class="r-side">
+          <p class="head"><b class="mk">##</b> how I build a run</p>
+          <p class="r-role">MY PATTERN FOR LONG-RUNNING AGENTS<br />LEAD AGENT · WORKERS · A HUMAN IN THE LOOP</p>
+          <div class="r-caps">
+            <p class="r-cap"><b>01</b> A task comes in. Big, messy, long-running.</p>
+            <p class="r-cap"><b>02</b> The lead splits it between workers.</p>
+            <p class="r-cap"><b>03</b> One worker hits something it shouldn't guess.</p>
+            <p class="r-cap"><b>04</b> So the run stops, saves a checkpoint, and asks a person.</p>
+            <p class="r-cap"><b>05</b> The answer comes back. The show picks up where it stopped.</p>
+            <p class="r-cap"><b>06</b> Every step leaves a trace I can grade.</p>
+          </div>
+          <p class="r-stack">the same shape works for research, coding or document agents.</p>
+        </div>
+        <div class="r-art">
+          <div class="r-back"></div>
+          <div class="pup r-p r-lead" data-color="#f6d36b" data-hat="top"></div>
+          <div class="pup r-p r-w r-w1" data-color="#e9a3b5" data-prop="glass"></div>
+          <div class="pup r-p r-w r-w2" data-color="#8fc3a8" data-prop="pencil"></div>
+          <div class="pup r-p r-w r-w3" data-color="#f1e9da" data-prop="check"></div>
+          <p class="r-name r-name--lead">lead</p>
+          <p class="r-name r-name--1">research</p>
+          <p class="r-name r-name--2">draft</p>
+          <p class="r-name r-name--3">verify</p>
+          <div class="r-task"><i></i><span>task.md</span></div>
+          <i class="r-slip r-slip--1"></i><i class="r-slip r-slip--2"></i><i class="r-slip r-slip--3"></i>
+          <div class="r-q">?</div>
+          <div class="r-dim"></div>
+          <div class="r-report">
+            <p class="rp-k">run report</p>
+            <div class="rp-row"><span>steps</span><span>14</span></div>
+            <div class="rp-row"><span>tool calls</span><span>38</span></div>
+            <div class="rp-row"><span>checkpoints</span><span>7</span></div>
+            <div class="rp-row"><span>questions for a person</span><span>1</span></div>
+            <div class="rp-row"><span>made-up facts</span><span>0</span></div>
+          </div>
+          <svg class="r-aud" viewBox="0 0 760 120" preserveAspectRatio="xMidYMax meet"></svg>
+          <div class="r-bubble"><p class="rb-k">from the front row</p><p class="rb-t"><span class="type">The newer one. Flag the conflict.</span></p></div>
+          <div class="r-status">
+            <span class="st st--run"><i></i>run 0418 · running</span>
+            <span class="st st--pause"><i></i>paused · checkpoint 7 saved</span>
+            <span class="st st--resume"><i></i>resumed from checkpoint 7</span>
+            <span class="st st--done"><i></i>done · every step traced</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · the crew behind the show: what an AI engineer actually does -->
+      <section class="room r-crew" data-label="crew" data-name="the crew behind the show">
+        <div class="wall"></div><div class="floor"></div><i class="c-spot"></i>
+        <p class="head"><b class="mk">##</b> the crew behind the show</p>
+        <p class="big split c-say">The puppets get the applause. The crew makes the show <em>work.</em></p>
+        <div class="c-row">
+          <div class="c-mem"><div class="pup c-p" data-color="#8fc3a8" data-prop="wrench"></div><p class="c-role">prop master</p></div>
+          <div class="c-mem"><div class="pup c-p" data-color="#2f4fb5" data-prop="book" data-hat="glasses"></div><p class="c-role">librarian</p></div>
+          <div class="c-mem"><div class="pup c-p" data-color="#e9a3b5" data-prop="clip"></div><p class="c-role">script supervisor</p></div>
+          <div class="c-mem"><div class="pup c-p" data-color="#f6d36b" data-hat="headset"></div><p class="c-role">stage manager</p></div>
+          <div class="c-mem"><div class="pup c-p" data-color="#f1e9da" data-prop="star" data-hat="beret"></div><p class="c-role">critic</p></div>
+        </div>
+        <div class="c-info">
+          <article class="c-card"><p class="c-k">01 · prop master</p><h3>Tools and permissions</h3><p>I design the tools an agent can pick up, and what it's allowed to do with them. One action at a time, each with a receipt.</p><p class="c-eg">Clicky Local: schema-checked tool loop, approved folders, undo</p></article>
+          <article class="c-card"><p class="c-k">02 · librarian</p><h3>Retrieval</h3><p>The agent should read the right page, not every page. I build retrieval that keeps each tenant's documents to itself.</p><p class="c-eg">Multi-Tenant RAG: 1,000+ queries, 0 cross-tenant leaks</p></article>
+          <article class="c-card"><p class="c-k">03 · script supervisor</p><h3>Memory and context</h3><p>Long runs forget, or drown in their own history. I decide what stays in context, what gets summarized, and what gets saved for later.</p><p class="c-eg">context compaction, history rules, checkpoints</p></article>
+          <article class="c-card"><p class="c-k">04 · stage manager</p><h3>Sandboxes and shipping</h3><p>Agents run real code. I give them a sandbox they can't break out of, and ship it so the same run behaves the same way twice.</p><p class="c-eg">Docker, versioned images, CI/CD, Vercel</p></article>
+          <article class="c-card"><p class="c-k">05 · critic</p><h3>Evals and traces</h3><p>Nobody gets applause until the run is graded. I read traces and score runs, so a fix is measured, not guessed.</p><p class="c-eg">next: found, missed, invented →</p></article>
+        </div>
+      </section>
+
+      <!-- 4 · found, missed, invented -->
+      <section class="room r-eval" data-label="eval" data-name="found, missed, invented">
+        <p class="head"><b class="mk">##</b> found, missed, invented</p>
+        <p class="big split e-say">I read traces until the agent's mistakes have <em>names.</em></p>
+        <div class="e-bins">
+          <div class="bin">
+            <div class="bin__items">
+              <span class="chip">all 12 required fields</span>
+              <span class="chip">the date range</span>
+              <span class="chip">the cited source</span>
+            </div>
+            <div class="bin__box"><b>found</b><i>3</i></div>
+          </div>
+          <div class="bin">
+            <div class="bin__items">
+              <span class="chip">a footnote exception</span>
+              <span class="chip">the second table</span>
+            </div>
+            <div class="bin__box"><b>missed</b><i>2</i></div>
+          </div>
+          <div class="bin">
+            <div class="bin__items">
+              <span class="chip chip--bad">a source that doesn't exist<s></s></span>
+            </div>
+            <div class="bin__box"><b>invented</b><i>1</i></div>
+          </div>
+        </div>
+        <p class="e-note">Then I fix the prompt, the skill or the tool. <em>Not the grader.</em></p>
+      </section>
+
+      <!-- 4 · on the side: other shows, posters on the backstage wall -->
+      <section class="room r-bench" data-label="bench" data-name="on the side">
+        <p class="head"><b class="mk">##</b> on the side <em>other shows</em></p>
+        <div class="b-track">
+          <article class="card" style="--band:#2f4fb5">
+            <p class="card__band">now showing</p>
+            <svg class="card__art" viewBox="0 0 240 120">
+              <rect x="10" y="20" width="220" height="22" rx="4" fill="#191714" />
+              <circle cx="190" cy="31" r="6" fill="#ec4a2c" />
+              <rect x="120" y="50" width="100" height="58" rx="8" fill="#f1e9da" stroke="#191714" stroke-width="1.5" />
+              <path d="M132 66 h60 M132 78 h48 M132 90 h68" stroke="#191714" stroke-width="2" />
+              <path d="M200 96 l6 6 l12 -14" stroke="#4f8f5e" stroke-width="3" fill="none" />
+            </svg>
+            <h3>Clicky Local</h3>
+            <p class="card__stack">Swift · macOS · Qwen · Codex · Playwright</p>
+            <p>A menu-bar agent for my Mac. Voice or typed. Small stuff goes to a local Qwen model, the rest to a Codex planner.</p>
+            <p>One action at a time, each with a receipt. It says done only after it checks.</p>
+            <p class="card__num"><b>21</b> Swift tests passing</p>
+          </article>
+          <article class="card" style="--band:#8fc3a8">
+            <p class="card__band">a chain of agents</p>
+            <svg class="card__art" viewBox="0 0 240 120">
+              <g fill="#f1e9da" stroke="#191714" stroke-width="1.5">
+                <rect x="14" y="44" width="56" height="34" rx="17" /><rect x="92" y="18" width="56" height="34" rx="17" /><rect x="92" y="72" width="56" height="34" rx="17" /><rect x="170" y="44" width="56" height="34" rx="17" fill="#ec4a2c" />
+              </g>
+              <path d="M70 61 C 82 61, 80 35, 92 35 M70 61 C 82 61, 80 89, 92 89 M148 35 C 160 35, 158 61, 170 61 M148 89 C 160 89, 158 61, 170 61" fill="none" stroke="#191714" stroke-width="1.5" />
+            </svg>
+            <h3>AgentForge</h3>
+            <p class="card__stack">FastAPI · OpenAI · React · MongoDB</p>
+            <p>Drag agents into a chain, then run it. Prompts are dynamic, runs branch, and every run keeps its history.</p>
+            <p class="card__num"><b>50+</b> pipelines · <b>1,000+</b> runs</p>
+          </article>
+          <article class="card" style="--band:#e9a3b5">
+            <p class="card__band">one tenant per room</p>
+            <svg class="card__art" viewBox="0 0 240 120">
+              <g fill="#f1e9da" stroke="#191714" stroke-width="1.5"><rect x="30" y="20" width="54" height="80" rx="4" /><rect x="93" y="20" width="54" height="80" rx="4" /><rect x="156" y="20" width="54" height="80" rx="4" /></g>
+              <g fill="none" stroke="#191714" stroke-width="1.5"><rect x="51" y="54" width="12" height="10" rx="1" /><path d="M53 54 v-3 a4 4 0 0 1 8 0 v3" /><rect x="114" y="54" width="12" height="10" rx="1" /><path d="M116 54 v-3 a4 4 0 0 1 8 0 v3" /><rect x="177" y="54" width="12" height="10" rx="1" /><path d="M179 54 v-3 a4 4 0 0 1 8 0 v3" /></g>
+              <circle cx="120" cy="88" r="5" fill="#ec4a2c" />
+            </svg>
+            <h3>Multi-Tenant RAG</h3>
+            <p class="card__stack">FastAPI · OpenAI · Vector Search · React</p>
+            <p>Upload your documents, get a chatbot you can embed with one script tag or an API key. Every tenant stays in its own room.</p>
+            <p class="card__num"><b>20+</b> users · <b>1,000+</b> queries · <b>0</b> leaks</p>
+          </article>
+          <article class="card" style="--band:#f6d36b">
+            <p class="card__band">opening night</p>
+            <svg class="card__art" viewBox="0 0 240 120">
+              <rect x="30" y="14" width="180" height="96" rx="6" fill="#f1e9da" stroke="#191714" stroke-width="1.5" />
+              <path d="M30 30 H210" stroke="#191714" stroke-width="1.5" />
+              <circle cx="40" cy="22" r="3" fill="#ec4a2c" /><circle cx="50" cy="22" r="3" fill="#191714" /><circle cx="60" cy="22" r="3" fill="#191714" />
+              <rect x="50" y="46" width="90" height="12" fill="#191714" /><rect x="50" y="64" width="64" height="6" fill="#191714" opacity=".4" />
+              <rect x="50" y="82" width="46" height="16" rx="8" fill="#ec4a2c" />
+              <rect x="152" y="44" width="40" height="54" fill="#2f4fb5" />
+            </svg>
+            <h3>Cofoundry</h3>
+            <p class="card__stack">FastAPI · OpenAI · React</p>
+            <p>An idea goes in. Market research and a competitor scan come out, then a launch page, deployed in one click.</p>
+            <p class="card__num">idea → page in <b>1</b> click</p>
+          </article>
+        </div>
+        <div class="b-floor"></div>
+      </section>
+
+      <!-- 5 · the trail -->
+      <section class="room r-trail" data-label="trail" data-name="the trail">
+        <p class="head"><b class="mk">##</b> the trail</p>
+        <div class="t-log">
+          <p class="t-cmd"><b>$</b> git log --reverse --format=career</p>
+          <div class="t-row"><span class="t-d">2025-06</span><span class="t-o">quantum edge llc</span><span class="t-r">ai engineer intern</span><span class="t-n">cnns, rnns, gans across 5+ projects</span></div>
+          <div class="t-row"><span class="t-d">2025-10</span><span class="t-o">exitech</span><span class="t-r">ai engineer intern</span><span class="t-n">4 mvps on fastapi + react, ~40% faster prototypes</span></div>
+          <div class="t-row"><span class="t-d">2026-01</span><span class="t-o">exitech</span><span class="t-r">software developer</span><span class="t-n">workflow automation, ~25% less manual work</span></div>
+          <div class="t-row"><span class="t-d">2026-06</span><span class="t-o">fast nuces</span><span class="t-r">bs software engineering</span><span class="t-n">genai, ai, dsa, databases, cloud</span></div>
+          <div class="t-row t-row--now"><span class="t-d">2026-08</span><span class="t-o">zikra infotech</span><span class="t-r">harness engineer</span><span class="t-n">millos.ai team · harnesses, evals, sandboxes <em class="t-here">← you are here</em></span></div>
+          <p class="t-cur"><b>$</b> <i class="t-caret"></i></p>
+        </div>
+      </section>
+
+      <!-- 6 · the kit: the prop rails -->
+      <section class="room r-kit" data-label="kit" data-name="the kit">
+        <p class="head"><b class="mk">##</b> the kit <em>props on the rail</em></p>
+        <div class="k-rails">
+          <div class="rail"><b class="rail__k">agents</b><div class="rail__tags"><span>LangChain JS</span><span>Deep Agents</span><span>LangGraph</span><span>LangSmith</span><span>Bedrock</span><span>RAG</span><span>skills</span><span>middleware</span><span>evals</span></div></div>
+          <div class="rail"><b class="rail__k">languages</b><div class="rail__tags"><span>TypeScript</span><span>Python</span><span>Swift</span><span>SQL</span><span>Go</span><span>C++</span><span>Java</span><span>C#</span></div></div>
+          <div class="rail"><b class="rail__k">full stack</b><div class="rail__tags"><span>Next.js</span><span>React</span><span>FastAPI</span><span>Node</span><span>Univer</span><span>Supabase</span><span>Postgres</span><span>Drizzle</span><span>MongoDB</span><span>Qdrant</span></div></div>
+          <div class="rail"><b class="rail__k">infra</b><div class="rail__tags"><span>Daytona</span><span>Docker</span><span>Vercel</span><span>pnpm</span><span>Turborepo</span><span>Vitest</span><span>GitHub Actions</span></div></div>
+          <div class="rail"><b class="rail__k">pair tools</b><div class="rail__tags"><span>Claude Code</span><span>Codex</span><span>Cursor</span></div></div>
+          <div class="rail"><b class="rail__k">practice</b><div class="rail__tags"><span>agent evals</span><span>trace debugging</span><span>prompt + skill design</span><span>human-in-the-loop</span><span>multi-tenant security</span></div></div>
+        </div>
+      </section>
+
+      <!-- the curtains: closed on the title, open for the show, closed again for the call -->
+      <div class="curtain curtain--l"></div>
+      <div class="curtain curtain--r"></div>
+      <div class="valance"></div>
+
+      <!-- 0 · home: the title on the closed curtain -->
+      <section class="room r-home" data-label="home" data-name="SAFI.md">
+        <p class="meta meta--l">MUHAMMAD SAFI UR REHMAN</p>
+        <p class="meta meta--r">ISLAMABAD · 2026</p>
+        <h1 class="h-title"><span class="h-safi">SAFI</span><i class="h-slot"></i><span class="h-md">md</span></h1>
+        <div class="h-card">
+          <i class="h-str h-str--l"></i><i class="h-str h-str--r"></i>
+          <p><b class="mk">&gt;</b> <span class="type">builds the harness around the model.</span></p>
+          <p><b class="mk">&gt;</b> <span class="type">agents, evals, sandboxes. the parts that make them hold up.</span></p>
+          <p><b class="mk">&gt;</b> <span class="type">currently a harness engineer at Zikra Infotech.</span></p>
+        </div>
+        <p class="hint"><span>scroll to open</span><i></i></p>
+      </section>
+
+      <!-- 7 · curtain call -->
+      <section class="room r-end" data-label="end" data-name="curtain call">
+        <div class="x-card">
+          <i class="h-str h-str--l"></i><i class="h-str h-str--r"></i>
+          <p class="head"><b class="mk">##</b> curtain call</p>
+          <p class="x-say"><b class="mk">&gt;</b> still running. <em>say hi</em><i class="slot x-slot"></i></p>
+          <a class="x-mail" href="mailto:m.safiurrehmann@gmail.com">m.safiurrehmann<wbr />@gmail.com</a>
+          <div class="x-links">
+            <a class="pill" href="https://www.linkedin.com/in/muhammad-safi-ur-rehman-934552253" target="_blank" rel="noopener">linkedin</a>
+            <a class="pill" href="https://x.com/sevonai1" target="_blank" rel="noopener">@sevonai1</a>
+            <a class="pill pill--ink" href="/safi-resume.pdf" download>resume.pdf</a>
+          </div>
+          <p class="x-foot">last edited nov 2026, islamabad · <a href="#read" class="x-plain">read as plain text</a></p>
+        </div>
+      </section>
+
+      <!-- the dot: drops out of the title and follows you through the show -->
+      <div id="dot"><i><b></b></i></div>
+    </div>
+
+    <div id="scroll" aria-hidden="true"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
